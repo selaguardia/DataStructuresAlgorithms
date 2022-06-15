@@ -15,5 +15,3 @@ const reverseString = (string) => {
   console.log(`[Reversed String:] \n${arrayString}`);
 };
 reverseString(OGstring);
-
-
