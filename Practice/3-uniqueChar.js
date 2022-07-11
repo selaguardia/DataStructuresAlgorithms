@@ -6,7 +6,7 @@ const isUnique = (string) => {
   // Step 1: Convert string to array splitting elements, then sort.
   let charArray = string.split('').sort();
   for (let i = 0; i < string.length; i++) {
-    if(charArray[i] != charArray[i + 1]) {
+    if(charArray[i] !== charArray[i + 1]) {
       continue;
     } else {
       return false
@@ -18,4 +18,6 @@ console.log(isUnique('zainab')) // false
 console.log(isUnique('cat & dog')) // false
 console.log(isUnique('cat+dog')) // true
 console.log(isUnique('jason')) // true
-console.log(isUnique('sergio')) // true
+console.log(isUnique('jasons')) // false
+console.log(isUnique('jasonS')) // true
+console.log(isUnique('jaSons')) // true
