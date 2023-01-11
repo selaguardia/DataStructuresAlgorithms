@@ -6,3 +6,13 @@ Example:
 > parensSubstring(')()(()))') 
 6
 */
+
+// Function Scoped
+for (var i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1000)
+}
+
+// Block Scoped
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1000)
+}

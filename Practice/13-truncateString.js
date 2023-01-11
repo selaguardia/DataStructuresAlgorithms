@@ -18,17 +18,52 @@ let n = 3
 // push to short word array
 // return string of short words
 
+// const regEx = /[a-z]+/ig;
+// const truncate = (string, n = 3) => {
+//   let words = string.match(regEx);
+//   let trimmedWord;
+//   words.forEach(word => {
+//     trimmedWord = word.slice(0,n)
+//   })
+//   console.log('words: ', words)
+//   console.log('trimmed: ', trimmedWord)
+//   return string.replace(regEx,trimmedWord)
+//   // return trimmedWord;
+//   // words.forEach(word => word.slice(0,n))
+// };
+
+
+// const truncate = (string, n = 3) => {
+//   let words = string.split(" ");
+//   let shortWords = [];
+//   words.forEach(word => shortWords.push(word.slice(0, n)));
+//   return shortWords.join(" ");
+// };
+
 const truncate = (string, n = 3) => {
-  let words = string.split(/[*,~_]/i);
-  console.log('p',words)
-  let shortWords = [];
-  // words.forEach((word) => {
-  //   let startingIndex = word.search(/[a-z]/i);
-  //   shortWords.push(word.slice(0, startingIndex+n));
+
+  // let words = string.split(" ");
+  let words = string.match(/[a-z]+/ig);
+  let trimmedWords =[];
+  words.forEach(word => {
+    trimmedWords.push(word.slice(0,n))
+  })
+
+  // console.log('1',string.replace(/[a-z]+/ig, trimmedWords))
+  // word.slice(0,n)
+  console.log('words: ', words)
+  console.log('trimmed: ', trimmedWords)
+
+  // return string.replace(/hello/ig, () => {
+  //   return 'lol'
   // });
-  // return shortWords.join(" ");
+  // string.replace(string.match(/[a-z]+/ig), string.slice(0,n))
+  // return string.replace(string.match(/[a-z]+/ig), string.slice(0,n));
+
+
+
+
 };
-// console.log(truncate("never gonna give you up"));
-console.log("attempt:",truncate("*hello* darkness, my ~old_friend", 3));
-console.log(" answer: *hel* dar, my ~old_fri");
-// sep slice intwo two, slice the entire w
+console.log(truncate("*hello* darkness, my ~old_friend", 3));
+
+
