@@ -9,7 +9,7 @@
 const longText = (word,nTimes) => {
   let longPhrase='';
   for(let i = 0; i < word.length; i++){
-    if(word[i].match(/[aeiou]/)) {
+    if(word[i].match(/[AEIOUaeiou]/)) {
       longPhrase += word[i].repeat(nTimes);
     } else {
       longPhrase += word[i];
@@ -18,3 +18,5 @@ const longText = (word,nTimes) => {
   return longPhrase;
 }
 console.log(longText('Florish', 5));
+console.log(longText('Sergio', 3));
+console.log(longText('Eddie', 3));

@@ -1,3 +1,5 @@
+//! METHOD 1 - Using Switch Statement
+
 const calculateGPA = (gradesList) => {
   let sumGradePoints = 0;
   gradesList.forEach((grade) => {
@@ -50,6 +52,7 @@ console.log(calculateGPA(['F', 'F', 'F'])); // Output: 0
 console.log(calculateGPA(['A', 'A-', 'B+', 'B', 'B-'])); // Output: 3.3
 console.log(calculateGPA(['A', 'B+', 'C-', 'A'])); // Output: 3.3
 
+//! METHOD 2 - USing Object
 const gradePoints = {
   "A": 4,
   "A-": 3.7,
